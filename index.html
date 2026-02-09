@@ -214,7 +214,11 @@
 
     <div class="container">
         <div id="question">
-            <div class="footer-text">Designed for Puspa 💝</div>
+            <div class="footer-text">Designed for <span id="name"></span> 💝</div>
+
+
+
+            
             <div class="emoji">🥰</div>
             <h1>Will You Be My Valentine?</h1>
             <p>I promise to make you smile every day! ✨</p>
@@ -235,6 +239,10 @@
     </div>
 
     <script>
+        const params = new URLSearchParams(window.location.search);
+        const name = params.get("name") || "Puspa";
+
+        document.getElementById("name").textContent = name;
         const yesBtn = document.getElementById('yesBtn');
         const noBtn = document.getElementById('noBtn');
         const question = document.getElementById('question');
