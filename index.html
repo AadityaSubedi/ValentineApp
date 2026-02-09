@@ -238,6 +238,8 @@
             <h2>Yay! You made my day! 💕</h2>
             <p style="font-size: 18px; margin-top: 20px;">I'm the happiest person alive! Can't wait to celebrate with you! 🥳</p>
             <div style="margin-top: 30px; font-size: 60px;">💑</div>
+            <button id="backBtn" style="margin-top: 30px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">Ask Me Again 💝</button>
+
         </div>
     </div>
 
@@ -257,6 +259,15 @@
             question.style.display = 'none';
             success.style.display = 'block';
             createConfetti();
+        });
+
+        // Back button functionality
+        const backBtn = document.getElementById('backBtn');
+        backBtn.addEventListener('click', () => {
+            success.style.display = 'none';
+            question.style.display = 'block';
+            // Reset NO button position
+            noBtn.style.transform = 'none';
         });
 
         // Make No button run away on hover (desktop)
